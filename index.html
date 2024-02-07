@@ -2151,7 +2151,7 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
      
       margin-bottom: 5px; 
             margin-top: 5px; " >
-      <form action="#">
+      <form id="qrr" action="#">
         <input type="file" hidden> 
           <i style="font-size: 22px" class="fa fa-upload"></i>
   </form>
@@ -3063,12 +3063,9 @@ const users = [
 
 ];
 
- const siga = document.getElementById("siga"); 
-
-           
 
 
-form = document.querySelector("form"),
+          
 
 fileInp = document.querySelector("input"); 
 
@@ -3100,13 +3097,17 @@ function checkLogin(xx) {
 
 
   if (checkLogin(xx)) {
- siga.innerHTML ="مرحبا بك"; 
- siga.style.color="green"; 
+ document.getElementById("siga").innerHTML ="مرحبا بك"; 
+ document.getElementById("siga").style.color="green"; 
    document.querySelector("input").value =""; 
   } else {
      
-        siga.innerHTML ="رقم البطاقة غير صحيح" + "<br>" + result; 
- siga.style.color="red"; 
+      document.getElementById("siga").innerHTML =
+"رقم البطاقة غير صحيح"  
++ "<br>" + result; 
+
+
+ document.getElementById("siga").style.color="red"; 
        document.querySelector("input").value =""; 
   }
 
@@ -3126,7 +3127,7 @@ fileInp.addEventListener("change", async e => {
     fetchRequest(file, Data);
 
 });
-form.addEventListener("click", () => fileInp.click());
+document.querySelector("#qrr").addEventListener("click", () => fileInp.click());
 </script>
 
 </body>
