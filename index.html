@@ -21,8 +21,7 @@
 <link rel="shortcut icon" sizes="16x16" href="https://www.dating.com/i/favicon.ico?21042017">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.1/css/all.css'>
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 
 <link href="https://fonts.googleapis.com/css?family=Changa|Lemonada|Cairo|Lalezar|El Messiri|Reem Kufi|Droid Arabic Kufi|Open+Sans"
  rel="stylesheet"> 
@@ -32,7 +31,25 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
        
    <style>
-	
+	.anim{
+animation: bounce; 
+-webkit-animation-duration:1s;
+animation-duration:1s;
+-webkit-animation-fill-mode:both;
+animation-fill-mode:both
+}
+.animm{
+animation: rubberBand; 
+-webkit-animation-duration:1s;
+animation-duration:1s;
+-webkit-animation-fill-mode:both;
+animation-fill-mode:both
+
+}
+@-webkit-keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translateZ(0);transform:translateZ(0)}40%,43%{-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}
+@keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translateZ(0);transform:translateZ(0)}40%,43%{-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}.bounce{-webkit-animation-name:bounce;animation-name:bounce;-webkit-transform-origin:center bottom;transform-origin:center bottom}
+@-webkit-keyframes rubberBand{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}
+@keyframes rubberBand{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.rubberBand{-webkit-animation-name:rubberBand;animation-name:rubberBand}
 
 #wpp-fix {
   position: fixed;
@@ -2882,49 +2899,6 @@ $('label').removeClass('active highlight');
     
     
     
-                <script>
-$(document).on('click','#sengggd', function(){
-
-var walink = 'https://web.whatsapp.com/send',
-    phone = '+212722812238',
-    walink2 = 'المرجو تزويدي بالأسعار'
-
-
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-var walink = 'whatsapp://send';
-}
-
-    input_ax1 = $("#ax1").val(),
-    input_ax2 = $("#ax2").val(), 
-    input_ax3 = $("#ax3").val(),     
-    input_ax4 = $("#ema").val(); 
-var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' + input_ax1 + '%0A' + input_ax2 + '%0A' + input_ax3 + '%0A' + input_ax4 + '%0A'; 
-
-  
-  if (  input_ax1 == ""  || input_ax2 ==  "" ||  input_ax3 ==
-"" ||   input_ax4 == "") {
-	
-        $("#eror").css("display", "block");  
-   
-         $("#eror").html("جميع الحقول ضرورية");  
-
-    return false;
-  }
-else{
-
-
-  	window.open(blanter_whatsapp,'_blank');
-          $("#wpp-fix").css("display","block") 
-     $('#fsend')[0].reset();
-         $("#eror").css("display", "none");  
-$('label').removeClass('active highlight');
-
-  } 
-  
-
-});
-</script>
 
 
       <script>
@@ -3025,7 +2999,7 @@ var ii =0;
     	//$(this).attr('src', images[x++]);
          	$(this).css('background-image', 'url(' + images[x++] +')');
       $(this).fadeIn(10);
-            $(this).addClass("animated rubberband");
+            $(this).addClass("animm");
       x = x % images.length;
     });
   }
@@ -3045,7 +3019,7 @@ var ii =0;
    
          	$(this).html(nas[i++]);
       $(this).fadeIn(200);
-            $(this).addClass("animated bounceInUp");
+            $(this).addClass("anim");
       i = i % nas.length;
     });
   }
