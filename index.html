@@ -2131,9 +2131,9 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
   filter: drop-shadow(2px 2px 2px #999);" width="80%" src="imgg/qr.png" />
 
      <span class="dribbble">تسجيل الدخول</span> 
-     <p id="sig" style="line-height: 20px; font-family:Arial; font-weight: 800">
+     <div id="siga" style="line-height: 20px; font-family:Arial; font-weight: 800">
 لتسجيل الدخول أنقر على الزر أدناه وارفع بطاقة الولوج السريع التي قمت بشرائها سلفا
-     </p>
+     </div>
      
          <div style="  color:#eee;
   font-weight:100;
@@ -3063,7 +3063,7 @@ const users = [
 
 ];
 
- var sig = document.getElementById('sig'); 
+ const siga = document.getElementById("siga"); 
 
            
 
@@ -3100,13 +3100,13 @@ function checkLogin(xx) {
 
 
   if (checkLogin(xx)) {
- sig.innerHTML ="مرحبا بك"; 
- sig.style.color="green"; 
+ siga.innerHTML ="مرحبا بك"; 
+ siga.style.color="green"; 
    document.querySelector("input").value =""; 
   } else {
      
-        sig.innerHTML ="رقم البطاقة غير صحيح" + "<br>" + result; 
- sig.style.color="red"; 
+        siga.innerHTML ="رقم البطاقة غير صحيح" + "<br>" + result; 
+ siga.style.color="red"; 
        document.querySelector("input").value =""; 
   }
 
