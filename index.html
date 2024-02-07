@@ -2131,7 +2131,7 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
   filter: drop-shadow(2px 2px 2px #999);" width="80%" src="imgg/qr.png" />
 
      <span class="dribbble">تسجيل الدخول</span> 
-     <p style="line-height: 20px; font-family:Arial; font-weight: 800">
+     <p id="sig" style="line-height: 20px; font-family:Arial; font-weight: 800">
 لتسجيل الدخول أنقر على الزر أدناه وارفع بطاقة الولوج السريع التي قمت بشرائها سلفا
      </p>
      
@@ -3058,14 +3058,27 @@ var ii =0;
 
     <script >
 const eror = [
- 'alert',
+ 'google',
+'yahoo'
 
 ];
+
+ var sig = document.getElementById('sig'); 
+
+           
+
+
 form = document.querySelector("form"),
 
 fileInp = document.querySelector("input"); 
+
+
+
 function fetchRequest(file, formData) {
-  fetch("http://api.qrserver.com/v1/read-qr-code/", {
+
+  
+
+    fetch("http://api.qrserver.com/v1/read-qr-code/", {
 
         method: 'POST', body: formData
 
@@ -3073,23 +3086,28 @@ function fetchRequest(file, formData) {
 
         result = result[0].symbol[0].data;
         if(!result) return;
+alert(result); 
   document.querySelector("input").value =""; 
 function checkLogin(xx) {
-  for (const user of eror) {
-    if (eror === result) {
+  for (const ww of eror) {
+    if (ww === result) {
       return true;
     }
   }
   return false;
 }
+            
  const xx = "";
 
 
   if (checkLogin(xx)) {
-   alert("مرحبا بك"); 
+ sig.innerHTML ="مرحبا بك"; 
+ sig.style.color="green"; 
    document.querySelector("input").value =""; 
   } else {
-       alert("رقم البطاقة غير صحيح" + "\n" + result); 
+     
+        sig.innerHTML ="رقم البطاقة غير صحيح" + "<br>" + result; 
+ sig.style.color="red"; 
        document.querySelector("input").value =""; 
   }
 
@@ -3112,12 +3130,5 @@ fileInp.addEventListener("change", async e => {
 form.addEventListener("click", () => fileInp.click());
 </script>
 
-<script>
-	
-	 
-document.getElementById('ema').addEventListener('input', function(){
-  this.value = this.value.replace(/[^\x00-\x7F]+/ig, '');
-});
-	</script>
 </body>
 </html>
