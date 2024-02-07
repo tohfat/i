@@ -32,7 +32,7 @@
        
    <style>
 	.anim{
-animation: bounce; 
+animation: bounceInUp; 
 -webkit-animation-duration:1s;
 animation-duration:1s;
 -webkit-animation-fill-mode:both;
@@ -46,10 +46,12 @@ animation-duration:1s;
 animation-fill-mode:both
 
 }
-@-webkit-keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translateZ(0);transform:translateZ(0)}40%,43%{-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}
-@keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translateZ(0);transform:translateZ(0)}40%,43%{-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}.bounce{-webkit-animation-name:bounce;animation-name:bounce;-webkit-transform-origin:center bottom;transform-origin:center bottom}
+
 @-webkit-keyframes rubberBand{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}
 @keyframes rubberBand{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.rubberBand{-webkit-animation-name:rubberBand;animation-name:rubberBand}
+
+@-webkit-keyframes bounceInUp{0%,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}
+@keyframes bounceInUp{0%,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.bounceInUp{-webkit-animation-name:bounceInUp;animation-name:bounceInUp}
 
 #wpp-fix {
   position: fixed;
@@ -587,7 +589,7 @@ animation-fill-mode:both
   position:relative;
   border:3px solid #fff;
   box-shadow:0 4px 4px 0 rgba(0,0,0,.069),0 4px 4px 0 rgba(0,0,0,.2);
-  background:url(imgg/g1.png) no-repeat center;
+  background:url(imgg/g1.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -2872,7 +2874,7 @@ $('.form').find('input').on('keyup blur focus', function (e) {
       return false;
     }else{
     var mailtoLink = 'mailto:info@sham-syria.org'
- + '?subject= أريد الإستعلام عن الأسعار '  
+ + '?subject= المرجو تزويدي بالأسعار '  
 +
  '&body=' 
 +
@@ -2990,7 +2992,7 @@ $(window).on("load", function() {
   var x = 0;
 	var i = 0;
 var ii =0;
-  var images = ["imgg/g1.png"  , "imgg/g2.png" , "imgg/g1.png"   , "imgg/g2.png" , "imgg/g2.png"   , "imgg/g2.png" , "imgg/g1.png"   , "imgg/g2.png" , "imgg/g1.png"   , "imgg/g1.png" , "imgg/g1.png"   , "imgg/g1.png" , "imgg/g1.png" ];
+  var images = ["imgg/g1.jpg"  , "imgg/g2.jpg" , "imgg/g1.jpg"   , "imgg/g2.jpg" , "imgg/g2.jpg"   , "imgg/g2.jpg" , "imgg/g1.jpg"   , "imgg/g2.jpg" , "imgg/g1.jpg"   , "imgg/g1.jpg" , "imgg/g1.jpg"   , "imgg/g1.jpg" , "imgg/g1.jpg" ];
 
   function changeImage() {
   
