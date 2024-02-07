@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>QR Code Reader | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+  	<p id="sig">
+  	gggg
+  	</p>
+    <div class="abel">
+      <form action="#">
+        <input type="file" hidden>
+      
+    
+          <i clahss="fas fa-cloud-upload"></i>
+              hhhhhh
+      
+        
+      
+      </form>
+      </div>
+<style>
+	
 
+.abel {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  border-radius: 15px;
+}
+
+
+	</style>
+
+    <script >
+function decode_utf8(s)
+{
+	return decodeURIComponent(escape(s));
+}
+
+var tt ="Ø¨Ø³Ù Ø§ÙÙÙ Ø§ÙØ±Ø­ÙÙ"; 
+  var gg = decode_utf8(tt);
+           // alert(gg); 
+
+
+
+
+
+
+
+const users = [
+ 'abeer',
+' ', 
+'jazeera'
+
+];
+
+ var sig = document.getElementById('sig'); 
+
+           
+
+
+form = document.querySelector("form"),
+
+fileInp = document.querySelector("input"); 
+
+
+
+function fetchRequest(file, formData) {
+
+  
+
+    fetch("http://api.qrserver.com/v1/read-qr-code/", {
+
+        method: 'POST', body: formData
+
+    }).then(res => res.json()).then(result => {
+
+        result = result[0].symbol[0].data;
+        if(!result) return;
+alert(result); 
+  document.querySelector("input").value =""; 
+function checkLogin(xx) {
+  for (const user of users) {
+    if (user === result) {
+      return true;
+    }
+  }
+  return false;
+}
+            
+ 
+ 
+
+  const xx = "";
+
+
+  if (checkLogin(xx)) {
+      sig.innerHTML = "مرحبا بك";
+       
+   
+   document.querySelector("input").value =""; 
+  } else {
+ 
+       document.querySelector("input").value =""; 
+  }
+
+
+
+    }); 
+
+}
+
+
+
+fileInp.addEventListener("change", async e => {
+
+    let file = e.target.files[0];
+
+    if(!file) return;
+
+    let Data = new FormData();
+
+    Data.append('file', file);
+
+    fetchRequest(file, Data);
+
+});
+
+
+form.addEventListener("click", () => fileInp.click());
+
+
+
+
+</script>
+
+  </body>
+</html>
