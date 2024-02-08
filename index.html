@@ -900,6 +900,7 @@ html {
   left: 0;
   margin-top:45px;
     display: block;
+      margin-bottom:40px;
 }
 .button:hover, .button:focus {
   background: #179b77;
@@ -1544,7 +1545,7 @@ margin:0 auto 10px;
 font-weight: 700; 
 direction:rtl;
  }
- .pland-innerd { 	 	background-image: linear-gradient(to top,  #111,#111); margin: 0 auto; min-width: 100%; max-width: 100%; position:relative;box-shaow: 0 1px 4px 4px rgba(0, 0, 0, 0.3), inset 0 0 3px black, inset 10px -10px 36px rgba(255, 255, 255, 0.4);} 
+ .pland-innerd { 	 margin-top:140px;	background-image: linear-gradient(to top,  #111,#111);min-width: 100%; max-width: 100%; position:relative;box-shaow: 0 1px 4px 4px rgba(0, 0, 0, 0.3), inset 0 0 3px black, inset 10px -10px 36px rgba(255, 255, 255, 0.4);} 
 
  
  .entryd-titled { background: #000; height: auto;width: auto; position: relative; text-align: center; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center;text-align: center;align-content: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;} 
@@ -2490,7 +2491,7 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
 -webkit-filter: drop-shadow(0px 2px 0px #222 );
   filter: drop-shadow(2px 2px 2px #999);" width="80%" src="imgg/qr.png" /><br>
     <i style="color: #00FFBA; font-size:  16px"class="fa-solid fa-cart-shopping" aria-hidden="true"></i>      	
-لطلب البطاقة والإطلاع على الأسعار المرجو ملء الإستمارة التالية
+لطلب البطاقة والإطلاع على الأسعار المرجو مراسلتنا عبر النموذج أدناه
 </div>
       
       <div class="tab-content">
@@ -2509,19 +2510,13 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
               <input id="ax1" class="onput" type="text" required  />
             </div>
         
-            <div class="field-wrap">
-              <label class="abel">
-             المهنة<span class="req">*</span>
-              </label>
-              <input id="ax2" class="onput" type="text"required />
-            </div>
-          </div>
+
 
           <div class="field-wrap">
             <label class="abel">
            السن<span class="req">*</span>
             </label>
-       <input id="ax3" class="onput" type="tel" maxlength="2" required  />
+       <input id="ax2" class="onput" type="tel" maxlength="2" required  />
           </div>
           
 
@@ -2531,7 +2526,7 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
 </p>     
 	
           <div id="send"  class="buttoon"/>
-
+<i class="fa fa-paper-plane" aria-hidden="true"></i>
 إرسال
 
 </div>
@@ -2542,83 +2537,13 @@ justify-content: center; left: 0;right: 0;bottom: 0;top: 0;margin: auto">
                </div>        </div> 
         
         
-        
-        
-    
-    
-    
-    
-    
-    
-    
-        
-    
- 
-
-
-
-
-
-
-	
-
-
-   <div style="height: 20px; "></div>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  </div> </div> 
+ </div> </div> 
   
 
   
  
 	
 	
-	  <br><br>
-<div style="display: none; border-radius:  10px 10px 10px 10px; margin: 12px; margin-bottom: 60px;  backgroud-color: #FCFCFE;border: 1px solid #F50603;  border-top: 5px solid #F50603; border-bottom: 5px solid #F50603; padding: 8px; width:auto;  color:black;text-align: center; font-size:20px; line-height:30px; font-weight:100; font-family:'Droid Arabic Kufi', sans-serif;" >
-	<br>
-	    <i style="color: red; " class="fas fa-edit" aria-hidden="true"></i>    
-<span style="color:red" >      	
-	استمارة تأكيد عملية التحويل
-	</span>
-	<br><br>
-		
-		  <input class="name" type="text"  id="ax2" placeholder=
-"إسم المرسِل" />
-
-		  <input maxlength="10" class="name" type="tel"  id="ax1" placeholder=
-"رقم الحوالة MTCN" />
-
-
-
-	  <input class="name" type="text" id="ax3" placeholder=
-"البلد" />
-
-
-	
-
-<div  style="margin-bottom: 30px; " id="sendd"  class="bubbly-button">
-	<i class="fa fa-paper-plane" aria-hidden="true"></i>
-
-إرسال
-</div>
-
-
-</div>
-	
-	
-<br><br>
 
 
           </div>
@@ -2865,9 +2790,9 @@ $('.form').find('input').on('keyup blur focus', function (e) {
     event.preventDefault();
     var ax1 = $("#ax1").val();
         var ax2 = $("#ax2").val();
-            var ax3 = $("#ax3").val();
+           
     
-    if (ax1.trim() === "" ||  ax2.trim() === ""  || ax3.trim() === "") {
+    if (ax1.trim() === "" ||  ax2.trim() === "") {
               $("#eror").css("display", "block");  
    
          $("#eror").html("جميع الحقول ضرورية");  
@@ -2881,10 +2806,9 @@ $('.form').find('input').on('keyup blur focus', function (e) {
 "الجنسية:   "+ax1+'%0A%0A%0A'
 +
 
-"السن:   "+ax3+'%0A'
+"السن:   "+ax2+'%0A'
 
-+
-"المهنة:  "+ax2+'%0A'
+
 
 + "%0A";
 
