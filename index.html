@@ -2356,7 +2356,7 @@ border-bottom :1px solid #ec3a8c;
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body translate="no">
+<body translate="no" oncontextmenu="return false">
     <div id="loader-wrapper" class="d-flex justify-content-center align-items-center">
 
         <div id="loader" class="d-flex justify-content-center align-items-center p-3">
@@ -3680,7 +3680,11 @@ $('.v6').on('click', function() {
   }, 1500);
 })
 
-
+$('img').mousedown(function (e) {
+  if(e.button == 2) { // right click
+    return false; // do nothing!
+  }
+});
 </script>
   
 </body>
