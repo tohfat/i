@@ -1,0 +1,175 @@
+
+<!DOCTYPE html><html dir="rtl" lang="ar" translate="no"><head><meta charSet="utf-8"/><link rel="manifest" href="/manifest.json"/><link rel="icon" href="/favicon.ico" sizes="32x32"/><meta name="theme-color" content="#0c0c0c"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="apple-touch-icon" href="/logos/bithEnglishArabicLogo.png"/><meta name="apple-mobile-web-app-status-bar" content="#0c0c0c"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"/><title>Bith.ai  | Login</title><meta name="robots" content="index,follow"/><meta name="description" content="Log in to get started!"/><link rel="alternate" hrefLang="ar" href="https://bith.tv//ar"/>
+
+<style>
+	
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 150px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: #fff #f7f7f7 #f5f5f5;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+
+.select-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 28px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px #fff;
+  background: 0 0 !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.select:after, .select:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888 transparent;
+  pointer-events: none;
+}
+
+.select:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.select:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+</style></head>
+
+<body>
+	      <select class="select" name="opt" id="opt" onchange="myFunction()">
+  <option value="84" selected="selected">
+1111
+</option>
+  <option value="15" disabled>
+2222
+</option>
+</select>
+<input id="val" type="text"/>
+
+<br><br>
+	
+	<select id="transport" name="transport" class="fontawesome" size="4">
+    <option class="fontawesome" value="metro">&#xf239 Métro</option>
+    <option class="fontawesome" value="taxi">&#xf1ba Taxi</option>
+    <option class="fontawesome" value="voiture">&#xf1b9 Voiture</option>
+    <option class="fontawesome" value="velo">&#xf206 Vélo</option>
+</select>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+
+
+
+<h2>Custom <code>select</code> element.</h2>
+
+<p>This is from <a href="https://www.staticgen.com/">https://www.staticgen.com/</a></p>
+
+
+  <div class="select">
+    <select name="filter" class="select-select">
+      <option value="" selected="">All languages</option>
+        <option value=".lang-javascript">Only JavaScript</option>
+        <option value=".lang-python">Only Python</option>
+        <option value=".lang-ruby">Only Ruby</option>
+        <option value=".lang-coffeescript">Only CoffeeScript</option>
+        <option value=".lang-go">Only Go</option>
+        <option value=".lang-perl">Only Perl</option>
+        <option value=".lang-.net">Only .Net</option>
+        <option value=".lang-php">Only PHP</option>
+        <option value=".lang-haskell">Only Haskell</option>
+        <option value=".lang-ocaml">Only OCaml</option>
+        <option value=".lang-java">Only Java</option>
+        <option value=".lang-lisp">Only Lisp</option>
+        <option value=".lang-tcl">Only Tcl</option>
+        <option value=".lang-clojure">Only Clojure</option>
+        <option value=".lang-javascript">Only Javascript</option>
+        <option value=".lang-awk">Only Awk</option>
+        <option value=".lang-java-8">Only Java 8</option>
+        <option value=".lang-bash">Only Bash</option>
+        <option value=".lang-scala">Only Scala</option>
+        <option value=".lang-lua">Only Lua</option>
+    </select>
+  </div>
+
+
+
+<script>
+
+
+function myFunction() {
+    var vall = document.getElementById("opt").value;
+    document.getElementById("val").value = vall;
+ 
+}
+myFunction() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+
+
+
+</html>
