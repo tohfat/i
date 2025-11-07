@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>استخلاص قيمتين مباشرة من الرابط (#/Value1/Value2)</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; padding: 20px; text-align: right; }
+        h1 { color: #2a6fdb; }
+        .info { margin-top: 20px; padding: 15px; background-color: #f0f0f0; border-left: 5px solid #2a6fdb; }
+        #pathDisplay { border: 1px solid green; padding: 10px; margin-top: 10px; background-color: #fff; direction: ltr; font-weight: bold; }
+        .result { margin-top: 20px; font-size: 1.1em; color: #d9534f; }
+        .success { color: #4CAF50; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>🔗 استخلاص قيمتين مباشرة من المسار الافتراضي (#/)</h1>
+
+    <div class="info">
+        <p><strong>طريقة التشغيل:</strong> قم بتعديل الرابط يدوياً ليحتوي على قيمتين مفصولتين بـ <code>/</code> بعد علامة <code>#</code>.</p>
+        <p><strong>المثال المطلوب:</strong> <code>[عنوان الملف]#/القيمة_الأولى/القيمة_الثانية</code></p>
+        <p><strong>الرابط الحالي:</strong></p>
+        <div id="pathDisplay"></div>
+    </div>
+
+    <div class="result">
+        <p><strong>القيمة الأولى (ID 1):</strong> <span id="valueOne" class="success">جاري الاستخلاص...</span></p>
+        <p><strong>القيمة الثانية (ID 2):</strong> <span id="valueTwo" class="success">جاري الاستخلاص...</span></p>
+    </div>
+
+    <script>
+    // -----------------------------------------------------
+    // 1. استخلاص القيمتين من الـ HashPath الحالي
+    // -----------------------------------------------------
+    
+    var fullHash = window.location.hash; // مثال: "#/123/abc"
+
+    var extractedValue1 = null;
+    var extractedValue2 = null;
+    var isExtracted = false;
+
+    if (fullHash.length > 1) {
+        var hashContent = fullHash.substring(1); // مثال: "/123/abc"
+        var pathSegments = hashContent.split('/'); 
+        
+        // المسارات الآن:
+        // pathSegments[0] = "" (بسبب الشرطة الأولى)
+        // pathSegments[1] = "123" (القيمة الأولى)
+        // pathSegments[2] = "abc" (القيمة الثانية)
+
+        // الاستخلاص: نأخذ القيمة في الموقع الثاني [1] والثالث [2]
+        if (pathSegments.length >= 2 && pathSegments[1].length > 0) {
+            extractedValue1 = pathSegments[1]; 
+            isExtracted = true;
+        }
+        
+        if (pathSegments.length >= 3 && pathSegments[2].length > 0) {
+            extractedValue2 = pathSegments[2]; 
+            isExtracted = true;
+        }
+    }
+
+    // -----------------------------------------------------
+    // 2. توليد أو تحديث الرابط (فقط إذا لم يتم استخلاص قيمة)
+    // -----------------------------------------------------
+    
+    if (!isExtracted) {
+        // إذا لم يتم العثور على قيمتين، نستخدم قيم افتراضية ونولد رابط مثال
+        var defaultID1 = 'A123';
+        var defaultID2 = 'B456';
+        var virtualPath = "/" + defaultID1 + "/" + defaultID2; 
+        
+        // تعيين الـ Hash Path (لتوليد رابط مثال)
+        window.location.hash = virtualPath; 
+        
+        extractedValue1 = defaultID1;
+        extractedValue2 = defaultID2;
+        
+        alert("⚠️ لم يتم العثور على قيم في الرابط. تم توليد رابط مثال: #/" + defaultID1 + "/" + defaultID2);
+    }
+
+
+    // التنبيه المطلوب (alert)
+    alert("القيمة الأولى المستخلصة هي: " + extractedValue1 + "\n" +
+          "القيمة الثانية المستخلصة هي: " + extractedValue2);
+
+    </script>
+
+</body>
+</html>
 
